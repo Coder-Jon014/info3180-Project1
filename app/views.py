@@ -32,7 +32,9 @@ def about():
 @app.route('/properties/create', methods=['GET', 'POST'])
 def properties():
     form = PropertyForm()
+    # Handle file upload
     if request.method == 'POST' and form.validate():
+        # create variables for the form fields (the form fields e.g. ['property_title'] should have the same name as the database columns)
         Title = request.form['property_title']
         Description = request.form['property_description']
         Rooms = request.form['noOfRooms']
@@ -40,10 +42,13 @@ def properties():
         Price = request.form['property_price']
         Location = request.form['property_location']
         Type = request.form['property_type']
+
+        # deailing with the image section here 
         image = form.property_image.data
         filename = secure_filename(image.filename)
         image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
+        # create the database using the info before
         new_property = Properties(Title, Description, Rooms, Bathrooms, Price, Location, Type, filename)
         db.session.add(new_property)
         db.session.commit()

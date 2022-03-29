@@ -63,10 +63,10 @@ h1{
     padding: 15px;
     font-size: 18px;
     font-weight: 600;
-    background-color:#0d5e6b;
+    background-color:#138fa3;
 }
 #btn:hover{
-    background-color: #0d5e6b;
+    background-color: #138fa3;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -97,11 +97,11 @@ h3{
 
  #PriceBtn{
      border-radius: 20px;
-     border:#0d5e6b solid 2px;
+     border:#138fa3 solid 2px;
      font-size: 12px;
      padding-left: 15px;
      padding-right: 15px;
-     background-color: #0d5e6b;
+     background-color: #138fa3;
      
  }
  #ViewBtn{
