@@ -13,7 +13,7 @@ class Properties(db.Model):
     property_location = db.Column(db.String(255))
     property_type = db.Column(db.String(255))
     property_imgFilename = db.Column(db.String(255))
-
+    
     def __init__(self, property_title, property_description, noOfRooms, noOfBathrooms, property_price, property_location, property_type, property_imgFilename):
         self.property_title = property_title
         self.property_description = property_description

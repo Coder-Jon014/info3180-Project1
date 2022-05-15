@@ -27,7 +27,7 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', topic="Not only allowing you to to find your dream house. We also provide you with the best deals on the market.")
+    return render_template('about.html', topic="Not only allowing you to to find your dream house. We provide you with the best deals on the market.")
 
 @app.route('/properties/create', methods=['GET', 'POST'])
 def properties():
